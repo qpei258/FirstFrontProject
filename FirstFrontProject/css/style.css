@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+
 * {
     margin: 0;                  /* 패딩값 초기화 */
     padding: 0;                 /* 마진값 초기화 */
     box-sizing: border-box;     /* 박스 영역은 테두리까지 지정 */
+}
+
+a {
+    text-decoration: none;
 }
 
 #container {
@@ -12,14 +18,23 @@
 header {
     width: 100%;
     height: 100px;
-    background-color: blue;
+    background-color: #07c;
 }
 
 #logo {
     float: left;                /* 왼쪽으로 플로팅 */
     width: 250px;
     height: 100px;
-    background-color: indigo;
+    line-height: 100px;
+    padding-left: 20px;
+}
+
+#logo h1 {
+    font-family: 'Merienda One', cursive;
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 0 -1px 0 #222;
 }
 
 nav {
