@@ -10,6 +10,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+}
+
 #container {
     margin: 0 auto;             /* 화면 중앙에 배치 */
     width: 1200px;              /* 너비 지정 */
@@ -41,7 +45,62 @@ nav {
     float: right;
     width: 900px;
     height: 100px;
-    background-color: green;
+    
+    padding-top: 40px; /* 메뉴를 아래로 내림 */
+}
+
+#topMenu {
+    height: 60px;
+}
+
+#topMenu > li {
+    float: left;
+    position: relative;         /* 서브 메뉴를 absolute로 만들기 위해 부모 요소를 relative로 지정 */
+}
+
+#topMenu > li > a {
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 1px #07c;
+    padding: 20px 60px;
+}
+
+#topMenu > li > a > span {
+    font-size: 0.5em;
+}
+
+#topMenu > li > a:hover {
+    color: #000;
+    text-shadow: 0 -1px #07c;
+}
+
+#topMenu > li > ul {
+    display: none;              /* 마우스를 올리기전 서브 메뉴를 감춤 */
+    position: absolute;         /* 서브메뉴 포지셔닝 */
+    width: 160px;
+    background-color: rgba(255, 255, 255, 0.6);
+    left: 20px;
+    margin: 0;
+}
+
+#topMenu > li > ul > li {
+    padding: 10px 10px 10px 30px;
+}
+
+#topMenu > li > ul >li > a {
+    font-size: 14px;
+    padding: 10px;
+    color: #000;
+}
+
+#topMenu > li:hover > ul {
+    display: block;             /* 마우스를 올리면 서브 메뉴 표시 */
+    z-index: 10;                /* 슬라이드 쇼에 가리지 않게 조절 */
+}
+
+#topMenu > li > ul > li > a:hover {
+    color: #f00;
 }
 
 #slideShow {
